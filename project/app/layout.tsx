@@ -13,6 +13,9 @@ const workSans = Work_Sans({
 export const metadata: Metadata = {
     title: "NFT Marketplace",
     description: "Discover digital art & Collect NFTs",
+    icons: {
+        icon: "/logo.svg",
+    },
 };
 
 export default function RootLayout({
@@ -27,8 +30,6 @@ export default function RootLayout({
             </head>
             <body className={`${workSans.variable} antialiased`}>
                 <Layout>{children}</Layout>
-                {/* <Header />
-                <Footer /> */}
             </body>
         </html>
     );
