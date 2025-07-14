@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/modules";
+import Layout from "@/provider";
 
 const workSans = Work_Sans({
     variable: "--font-work-mono",
@@ -25,9 +26,9 @@ export default function RootLayout({
                 <link rel="icon" href="public/logo.svg" />
             </head>
             <body className={`${workSans.variable} antialiased`}>
-                <Header />
-                {children}
-                <Footer />
+                <Layout>{children}</Layout>
+                {/* <Header />
+                <Footer /> */}
             </body>
         </html>
     );
